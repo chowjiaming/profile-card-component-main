@@ -5,37 +5,107 @@
 *,
 ::before,
 ::after {
+  margin: 0;
+  padding: 0;
   box-sizing: inherit;
 }
 
 body {
   min-height: 100vh;
   background-color: hsl(185, 75%, 39%);
+  font-family: "Kumbh Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
+  padding: 2em;
 }
 
 body::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -40%);
-    background-image: url(images/bg-pattern-top.svg);
-    background-repeat: no-repeat;
-    background-position: right bottom;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -40%);
+  background-image: url(images/bg-pattern-top.svg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
 }
 
 body::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(60%, 50%);
-    background-image: url(images/bg-pattern-bottom.svg);
-    background-repeat: no-repeat;
-    /* background-position: right bottom; */
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(60%, 50%);
+  background-image: url(images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  /* background-position: right bottom; */
+}
+
+.card {
+  /* min-width: 25%; */
+  width: 30em;
+  border-radius: 1em;
+  z-index: 1;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.25);
+}
+
+.card__body {
+  text-align: center;
+  padding-top: 4em;
+  position: relative;
+  padding-bottom: 2em;
+  border-bottom: solid 1px lightgray;
+}
+
+.card__banner {
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  display: block;
+  width: 100%;
+}
+
+.card__profile-picture {
+  border-radius: 50%;
+  border: solid 5px white;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__age {
+  font-weight: 400;
+  color: lightgray;
+  padding-left: 0.5em;
+}
+
+.card__location {
+  color: grey;
+}
+
+.card__footer {
+  padding: 1em;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.followers,
+.likes,
+.photos {
+  font-weight: 400;
+  color: grey;
 }
